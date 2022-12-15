@@ -3,24 +3,30 @@
 
         <div>
             Funcionário: <input type="text" [(ngModel)]="funcionario"> 
-            Id do Funcionário: <select name="">
-                <option value="Colaborador" ></option>
-                <option value="Prestador"></option>
+            Id do Funcionário: 
+            <select name="idaFuncionario" [(ngModel)]="idFuncionario">
+                <option value="colaborador" >Colaborador</option>
+                <option value="Prestador">Prestador</option>
             </select>
         </div>
 
         <div>
-            KmL: <input type="number">
-            Km Total: <input type="text" >
+            KmL: <input type="number" [(ngModel)]="kmL">
+            Km Total: <input type="text" [(ngModel)]="kmTotal">
         </div>
         <div>
-            Veiculo: <input type="text">
-            Autorizador: <input type="text">
+            Veiculo: <input type="text" [(ngModel)]="veiculo">
+            Autorizador: <input type="text" [(ngModel)]="autorizador">
         </div>
 
         <div>
             <button (click)="salvarcabecalho()">Salvar</button>
         </div>
-
+        
     </fieldset>
+    <div id="sucesso" >
+        <div class="alert alert-success" role="alert"  [style.display]="classe == 'alert-success' ? 'block' : 'none'">
+            Cabecalho salvo com sucesso!!
+        </div>
+    </div>
 </div>
