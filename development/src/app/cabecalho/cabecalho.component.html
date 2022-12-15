@@ -1,0 +1,26 @@
+<div>
+    <fieldset class="header">
+
+        <div>
+            Funcionário: <input type="text" [(ngModel)]="funcionario"> 
+            Id do Funcionário: <select name="">
+                <option value="Colaborador" ></option>
+                <option value="Prestador"></option>
+            </select>
+        </div>
+
+        <div>
+            KmL: <input type="number">
+            Km Total: <input type="text" >
+        </div>
+        <div>
+            Veiculo: <input type="text">
+            Autorizador: <input type="text">
+        </div>
+
+        <div>
+            <button (click)="salvarcabecalho()">Salvar</button>
+        </div>
+
+    </fieldset>
+</div>
